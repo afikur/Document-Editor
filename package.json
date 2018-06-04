@@ -1,0 +1,30 @@
+{
+  "name": "document-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afikur/document-editor.git"
+  },
+  "keywords": [
+    "document",
+    "editor",
+    "wysiwyg"
+  ],
+  "author": "Afikur Rahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afikur/document-editor/issues"
+  },
+  "homepage": "https://github.com/afikur/document-editor#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "ckeditor": "^4.8.0"
+  }
+}

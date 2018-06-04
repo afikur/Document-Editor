@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="./node_modules/ckeditor/ckeditor.js"></script>
+	<title>Document Editor</title>
+    <style>
+        .container {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+	<textarea id="editor1">
+        
+            <h2>The Flavorful Tuscany Meetup</h2><p><strong>Welcome letter</strong></p><p>Dear Guest,</p><p>We are delighted to welcome you to the annual <em>Flavorful Tuscany Meetup</em> and hope you will enjoy the programme as well as your stay at the Bilancino Hotel.</p><p>Please find below the full schedule of the event.</p><table cellpadding="15" cellspacing="0" border="1" class=" "><thead><tr><th colspan="2" scope="col">Saturday, July 14</th></tr></thead><tbody><tr><td>9:30 AM - 11:30 AM</td><td>Americano vs. Brewed - “know your coffee” session with <strong>Stefano Garau</strong></td></tr><tr><td>1:00 PM - 3:00 PM</td><td>Pappardelle al pomodoro - live cooking session with <strong>Rita Fresco</strong></td></tr><tr><td>5:00 PM - 8:00 PM</td><td>Tuscan vineyards at a glance - wine-tasting session with <strong>Frederico Riscoli</strong></td></tr></tbody></table><blockquote><p>The annual Flavorful Tuscany meetups are always a culinary discovery. You get the best of Tuscan flavors during an intense one-day stay at one of the top hotels of the region. All the sessions are lead by top chefs passionate about their profession. I would certainly recommend to save the date in your calendar for this one!</p><p>Angelina Calvino, food journalist</p></blockquote><p>Please arrive at the Bilancino Hotel reception desk at least <strong>half an hour earlier</strong> to make sure that the registration process goes as smoothly as possible.</p><p>We look forward to welcoming you to the event.</p><p><strong>Victoria Valc</strong><br><strong>Event Manager</strong><br><strong>Bilancino Hotel</strong></p>
+            
+	</textarea>
+</div>
+<script>
+	CKEDITOR.replace( 'editor1', {
+		toolbar: [
+			{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+			{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+			{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'CopyFormatting' ] },
+			{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+			{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+			{ name: 'links', items: [ 'Link', 'Unlink' ] },
+			{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
+			{ name: 'insert', items: [ 'Image', 'Table' ] },
+			{ name: 'tools', items: [ 'Maximize' ] },
+			{ name: 'editing', items: [ 'Scayt' ] }
+		],
+
+		customConfig: '',
+
+		disallowedContent: 'img{width,height,float}',
+		extraAllowedContent: 'img[width,height,align]',
+
+		extraPlugins: 'tableresize,uploadimage,uploadfile',
+
+		height: 900,
+
+		contentsCss: [ './node_modules/ckeditor/contents.css', 'styles.css' ],
+
+		bodyClass: 'document-editor',
+		
+		format_tags: 'p;h1;h2;h3;pre',
+		
+		removeDialogTabs: 'image:advanced;link:advanced',
+
+		
+		stylesSet: [
+			/* Inline Styles */
+			{ name: 'Marker', element: 'span', attributes: { 'class': 'marker' } },
+			{ name: 'Cited Work', element: 'cite' },
+			{ name: 'Inline Quotation', element: 'q' },
+
+			/* Object Styles */
+			{
+				name: 'Special Container',
+				element: 'div',
+				styles: {
+					padding: '5px 10px',
+					background: '#eee',
+					border: '1px solid #ccc'
+				}
+			},
+			{
+				name: 'Compact table',
+				element: 'table',
+				attributes: {
+					cellpadding: '5',
+					cellspacing: '0',
+					bordercolor: '#ccc',
+				},
+				styles: {
+					'border-collapse': 'collapse'
+				}
+			},
+			{ name: 'Borderless Table', element: 'table', styles: { 'border-style': 'hidden', 'background-color': '#E6E6FA' } },
+			{ name: 'Square Bulleted List', element: 'ul', styles: { 'list-style-type': 'square' } }
+		]
+	} );
+</script>
+</body>
+</html>
