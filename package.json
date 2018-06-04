@@ -25,6 +25,7 @@
     "lite-server": "^2.3.0"
   },
   "dependencies": {
-    "ckeditor": "^4.8.0"
+    "ckeditor": "^4.8.0",
+    "ckeditor-full": "^4.7.3"
   }
 }

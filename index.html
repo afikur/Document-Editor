@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<script src="./node_modules/ckeditor/ckeditor.js"></script>
+	<script src="./node_modules/ckeditor-full/ckeditor.js"></script>
 	<title>Document Editor</title>
     <style>
         .container {
@@ -38,11 +38,11 @@
 		disallowedContent: 'img{width,height,float}',
 		extraAllowedContent: 'img[width,height,align]',
 
-		extraPlugins: 'tableresize,uploadimage,uploadfile',
-
+		// extraPlugins: 'tableresize,uploadimage,uploadfile',
+		extraPlugins: '',
 		height: 900,
 
-		contentsCss: [ './node_modules/ckeditor/contents.css', 'styles.css' ],
+		contentsCss: [ './node_modules/ckeditor-full/contents.css', 'styles.css' ],
 
 		bodyClass: 'document-editor',
 		
@@ -56,7 +56,7 @@
 			{ name: 'Marker', element: 'span', attributes: { 'class': 'marker' } },
 			{ name: 'Cited Work', element: 'cite' },
 			{ name: 'Inline Quotation', element: 'q' },
-
+			
 			/* Object Styles */
 			{
 				name: 'Special Container',
